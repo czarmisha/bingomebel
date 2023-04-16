@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo d-flex align-items-center">
+                    <a href="#" class="logo_link d-flex align-items-center">
+                        <img class="logo_img" src="media/logo.png" alt="Логотип">
+                    </a>
+                </div>
+                <div class="phone">
+                    <p>Телефон: 8 (800) 123-45-67</p>
+                </div>
+                <a link="#" class="write-us">Написать нам</a>
+            </div>
+        </div>
+        <div class="header_content">
+            <div class="container d-flex flex-column align-items-start">
+                <div class="header_content_text">
+                    <h1>Добро пожаловать на наш сайт</h1>
+                    <p>Мы предлагаем качественные услуги по разработке веб-сайтов и мобильных приложений</p>
+                </div>
+                <button class="section-1-button">Узнать больше</button>
+            </div>
+        </div>
+        <div class="header_bg">
+            <img src="media/header_bg.jpeg" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="main_content">
+            <div class="container">
+
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+    <form id="regForm" action="">
+
+        <h1>Register:</h1>
+        
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">Name:
+          <p><input placeholder="First name..."></p>
+          <p><input placeholder="Last name..."></p>
+        </div>
+        
+        <div class="tab">Contact Info:
+          <p><input placeholder="E-mail..."></p>
+          <p><input placeholder="Phone..."></p>
+        </div>
+        
+        <div class="tab">Birthday:
+          <p><input placeholder="dd"></p>
+          <p><input placeholder="mm"></p>
+          <p><input placeholder="yyyy"></p>
+        </div>
+        
+        <div class="tab">Login Info:
+          <p><input placeholder="Username..."></p>
+          <p><input placeholder="Password..."></p>
+        </div>
+        
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+        </div>
+        
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+        
+    </form>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

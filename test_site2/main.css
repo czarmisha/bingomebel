@@ -1,0 +1,107 @@
+
+header {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.header_bg {
+    background-size: cover;
+    background-position: top center,top left,top right;
+    background-repeat: no-repeat;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+}
+
+.header_bg img, .header_bg::after {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.header_bg::after {
+    z-index: 3;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.322); */
+    /* background-image: -o-linear-gradient(left, black, black 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0)), -o-linear-gradient(bottom, black, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0));
+    /* background-image: linear-gradient(to right, black, black 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0)), linear-gradient(to top, black, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0)) var(--bg-main);; */
+}
+.header_top{
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.478);
+}
+.header_top .phone {
+    color: white;
+}
+.header_top .write-us {
+    color: white;
+}
+.header_content{
+    position: relative;
+    z-index: 2;
+}
+.logo_img {
+    height: 88px;
+    width: auto;
+}
+
+/* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+  /* Style the input fields */
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
