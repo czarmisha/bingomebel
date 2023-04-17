@@ -184,26 +184,84 @@
         <h1>Register:</h1>
         
         <!-- One "tab" for each step in the form: -->
-        <div class="tab">Name:
-          <p><input placeholder="First name..."></p>
-          <p><input placeholder="Last name..."></p>
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 1</span>
+                <h3>Выберите планировку кухни</h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q1" value="Прямая">
+                <input type="radio" name="q1" value="Угловая">
+                <input type="radio" name="q1" value="П-образная">
+                <input type="radio" name="q1" value="С островом">
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 2</span>
+                <h3>Укажите размер кухни/h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q2" value="До 3 метров">
+                <input type="radio" name="q2" value="От 3 до 5 метров">
+                <input type="radio" name="q2" value="От 5 до 7 метров">
+                <input type="radio" name="q2" value="Больше 7 метров">
+            </div>
         </div>
         
-        <div class="tab">Contact Info:
-          <p><input placeholder="E-mail..."></p>
-          <p><input placeholder="Phone..."></p>
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 3</span>
+                <h3>Выберите стиль кухни</h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q3" value="Современный стиль">
+                <input type="radio" name="q3" value="Просто и со вкусом">
+                <input type="radio" name="q3" value="Классический стиль">
+                <input type="radio" name="q3" value="Свой вариант">
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 4</span>
+                <h3>Выберите материал фасада</h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q4" value="Акрил">
+                <input type="radio" name="q4" value="ЛМДФ">
+                <input type="radio" name="q4" value="ЛДСП">
+                <input type="radio" name="q4" value="Крашенный МДФ">
+                <input type="radio" name="q4" value="Шпон">
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 5</span>
+                <h3>Выберите материал столешницы</h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q5" value="ЛДСП">
+                <input type="radio" name="q5" value="Акрил">
+                <input type="radio" name="q5" value="Кварц">
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 6</span>
+                <h3>Укажите планируемый бюджет</h3>
+            </div>
+            <div class="quiz_body">
+                <input type="radio" name="q6" value="до 25 млн. сум">
+                <input type="radio" name="q6" value="до 35 млн. сум">
+                <input type="radio" name="q6" value="до 45 млн. сум">
+                <input type="radio" name="q6" value="выше 45 млн. сум">
+            </div>
         </div>
         
-        <div class="tab">Birthday:
-          <p><input placeholder="dd"></p>
-          <p><input placeholder="mm"></p>
-          <p><input placeholder="yyyy"></p>
-        </div>
-        
-        <div class="tab">Login Info:
-          <p><input placeholder="Username..."></p>
-          <p><input placeholder="Password..."></p>
-        </div>
         
         <div style="overflow:auto;">
           <div style="float:right;">
@@ -214,6 +272,8 @@
         
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
