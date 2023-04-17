@@ -98,3 +98,78 @@ $('.gallery_slider').slick({
     ]
   });
 
+
+// Находим все картинки на странице
+var $images = $('.gallery_slide img');
+
+// Назначаем обработчик клика на каждую картинку
+$images.on('click', function() {
+  var $this = $(this);
+
+  // Находим блок, в котором находится картинка
+  var $block = $this.closest('.gallery_slide_photo');
+
+  // Находим все картинки в блоке
+  var $blockImages = $block.find('img');
+
+  // Создаем элементы слайдера
+  var $slider = $('<div class="slider"></div>');
+
+  // Добавляем каждую картинку в слайдер
+  $blockImages.each(function() {
+    var $slide = $('<div class="slide"></div>');
+    var $image = $('<img>');
+
+    $image.attr('src', $(this).attr('src'));
+
+    $slide.append($image);
+    $slider.append($slide);
+  });
+
+  // Вставляем слайдер в модальное окно
+  $('#modal').append($slider);
+  
+  var $sliderDots = $('<div class="slider_dots"></div>');
+  $('#modal').append($sliderDots);
+
+  // Открываем модальное окно
+  $('#modal').show();
+
+  // Инициализируем слайдер
+  $slider.slick({
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    fade: true,
+    appendArrows: $("#modal .slider_arrows"),
+    appendDots: $("#modal .slider_dots"),
+    lazyLoad: 'ondemand',
+    prevArrow: '<button type="button" class="slider-prev slider-arrow"></button>',
+    nextArrow: '<button type="button" class="slider-next slider-arrow"></button>',
+    responsive: [
+      {
+        breakpoint: 699,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+  });
+
+  // Назначаем обработчик клика на кнопку закрытия модального окна
+  $('#close-modal').on('click', function() {
+    // Удаляем слайдер
+    $slider.slick('unslick');
+    // Удаляем модальное окно
+    $('#modal').hide();
+    // Отписываемся от обработчика клика на кнопке закрытия модального окна
+    $(this).off('click');
+
+    $slider.remove()
+    $sliderDots.remove()
+  });
+});
+
+
