@@ -9,6 +9,15 @@ a {
   text-decoration: none;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
 /* ************************************************************************************************* */
 /* ========================================== HEADER ==========================================  */
 header {
@@ -230,16 +239,330 @@ header {
   }
 }
 
+@media(max-width: 350px){
+  .header_content_text h1{
+    font-size: 22px;
+  }
+  
+  .header_content_text h2{
+    font-size: 12px;
+  }
+  
+  .header_content_call p{
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .quiz_btn {
+    padding: 6px 12px; /* Отступы внутри кнопки */
+  }
+  
+  .quiz_btn span {
+    font-size: 15px; /* Размер текста на кнопке */
+  }
+
+  .header_top .write-us {
+    font-size: 9px;
+    padding: 5px 10px;
+  }
+
+  .logo_img {
+    height: 66px;
+    width: auto;
+  }
+
+  .header_top .phone{
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
 
 
+/* ************************************************************************************************* */
+/* =========================================== MAIN CONTENT SECTION =======================================  */
+.main_content{
+  padding: 55px 0;
+}
 
-/* Style the form */
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+.main_content h2{
+  text-transform: uppercase;
+  text-align: center;
+  color: #495057;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.main_content h3 {
+  text-align: center;
+  color: #495057;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.main_content p {
+  text-align: center;
+  color: #495057;
+  max-width: 240px;
+  font-size: 16px;
+}
+
+.main_content .box_img img{
+  width: 100px;
+  height: 100px;
+}
+
+/* ************************************************************************************************* */
+/* =========================================== MAIN CONTENT SECTION MEDIA =======================================  */
+@media(max-width: 576px){
+  .main_content h3 {
+    font-size: 17px;
+  }
+  
+  .main_content p {
+    font-size: 14px;
+  }
+}
+
+/* ************************************************************************************************* */
+/* =========================================== GALLERY SECTION =======================================  */
+.gallery{
+  padding: 55px 0;
+  background-color: #2a2c2d;
+}
+
+.gallery h2{
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.gallery_slide_photo{
+  width: 60%;
+}
+
+.gallery_slide_photo_top, .gallery_slide_photo_bottom{
+  width: 100%;
+}
+
+.gallery_slide_photo_top img, .gallery_slide_photo_bottom img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #ddb075;
+}
+
+.gallery_slide_photo_bottom .img_wrapper{
+  margin-top: 15px;
+  width: 30%;
+}
+
+.gallery_slide_info{
+  width: 35%;
+}
+
+.gallery_slide_info h4{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-size: 28px;
+}
+
+.gallery_slide_info .description {
+  color: #dddede;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.gallery_slide_info .price{
+  margin-top: 30px;
+}
+
+.gallery_slide_info .price p {
+  color: #dddede;
+  font-weight: 400;
+  font-size: 16px;
+  padding-right: 15px;
+  line-height: 18px;
+}
+
+.gallery_slide_info .price span {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.gallery_slider_arrows {
+  position: absolute;
+  width: 104%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: -2%;
+  transform: translateY(-105%);
+}
+
+
+.slider-arrow {
+  border: none;
+  outline: none;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.511);
+}
+
+.slider-prev {
+  background-image: url('media/arrow.png');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotate(180deg);
+}
+
+.slider-next {
+  background-image: url('media/arrow.png');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.gallery_slider_dots ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.68rem;
+}
+
+.gallery_slider_dots li:not(:last-child) {
+  margin-right: 0.94rem;
+}
+
+.gallery_slider_dots button {
+  font-size: 0;
+  outline: none;
+  border: none;
+  width: 1.063rem;
+  height: 1.063rem;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  transition: white;
+}
+
+.gallery_slider_dots .slick-active button, .gallery_slider_dots button:hover {
+  background-color: #ddb075;
+}
+
+/* ************************************************************************************************* */
+/* =========================================== GALLERY SLIDER MEDIA =======================================  */
+@media(max-width: 992px) {
+  .gallery_slide_info{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .gallery_slide_photo{
+    width: 70%;
+  }
+  .gallery_slider_arrows {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-105%);
+  }
+}
+@media(max-width: 576px){
+  .gallery_slide_photo{
+    width: 100%;
+  }
+  .gallery h2 {
+    font-size: 24px;
+  }
+  .gallery_slide_info .description {
+    width: 100%;
+  }
+  .gallery_slide_info .price {
+    width: 100%;
+  }
+  .gallery_slide_info .price p{
+    width: 100%;
+  }
+}
+
+/* ************************************************************************************************* */
+/* =========================================== FOOTER =======================================  */
+footer{
+  padding: 30px 0;
+  background: #2a2c2d;
+}
+
+.footer_info p {
+  margin: 0;
+  line-height: 15px;
+  color: white;
+  font-size: 17px;
+}
+
+.policy p {
+  margin: 0;
+  line-height: 5px;
+  color: white;
+  font-size: 17px;
+}
+
+.policy a{
+  text-decoration: underline;
+  color: #ddb075;
+  font-size: 17px;
+}
+
+.contacts a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 7px;
+}
+
+.contacts img{
+  width: 100%;
+}
+
+@media(max-width: 768px){
+  .policy {
+    padding: 15px 5px;
+  }
+  .footer_info, .policy, .contacts{
+    text-align: center;
+  }
+}
+
+
+/* ************************************************************************************************* */
+/* =========================================== FORM =======================================  */
+#multiForm {
+  position: fixed; /* фиксируем форму */
+  top: 50%; /* выравниваем по вертикали */
+  left: 50%; /* выравниваем по горизонтали */
+  transform: translate(-50%, -50%); /* центрируем */
+  width: 80%; /* задаем ширину формы */
+  max-width: 90%; /* задаем максимальную ширину формы */
+  background-color: #fff; /* задаем цвет фона */
+  padding: 20px; /* добавляем отступы */
+  border-radius: 10px; /* добавляем скругление углов */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* добавляем тень */
+  z-index: 999; /* устанавливаем высокий индекс для показа формы поверх всего */
+  display: none; /* скрываем форму по умолчанию */
+}
+
+#multiForm.active {
+  display: flex;
 }
 
 /* Style the input fields */
@@ -280,5 +603,22 @@ input.invalid {
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-  background-color: #4CAF50;
+  background-color: #2a9c2e;
+}
+
+/* стили для кнопки закрытия */
+.close-button {
+  position: absolute; /* позиционируем кнопку абсолютно */
+  top: 10px; /* отступ сверху */
+  right: 10px; /* отступ справа */
+  font-size: 20px; /* размер шрифта */
+  font-weight: bold; /* жирный шрифт */
+  color: #333; /* цвет текста кнопки */
+  cursor: pointer; /* меняем курсор при наведении на кнопку */
+}
+.close-button:hover {
+  color: #f00; /* меняем цвет текста кнопки при наведении на нее курсора */
+}
+.hidden {
+  display: none;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
@@ -35,7 +36,7 @@
                 <div class="header_content_call">
                     <p>Хотите узнать стоимость кухни вашей мечты всего за 1 минуту совершенно бесплатно?</p>
                     <div class="header_btn_wrapper">
-                        <button class="quiz_btn">
+                        <button class="quiz_btn" onclick="document.getElementById('multiForm').classList.add('active')">
                             <span>Рассчитать стоимость</span>
                         </button>
 
@@ -50,16 +51,135 @@
     <main>
         <section class="main_content">
             <div class="container-lg">
-
+                <h2>Почему мы</h2>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
+                        <div class="box_wrapper d-flex flex-column align-items-center">
+                            <div class="box_img d-flex flex-column align-items-center">
+                                <img src="media/why_us1.png" alt="">
+                            </div>
+                            <h3>Высокое <br> качество</h3>
+                            <p>Мы используем только качественные материалы и оборудование высокого уровня, что гарантирует долговечность и функциональность мебели</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
+                        <div class="box_wrapper d-flex flex-column align-items-center">
+                            <div class="box_img d-flex flex-column align-items-center">
+                                <img src="media/why_us2.png" alt="">
+                            </div>
+                            <h3>Индивидуальный <br> дизайн</h3>
+                            <p>Мы разработаем уникальный дизайн мебели, учитывая все ваши пожелания и требования, исходя из которых создадим мебель, которая отлично впишется в ваш интерьер</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
+                        <div class="box_wrapper d-flex flex-column align-items-center">
+                            <div class="box_img d-flex flex-column align-items-center">
+                                <img src="media/why_us3.png" alt="">
+                            </div>
+                            <h3>Доступные <br> цены</h3>
+                            <p>Мы предлагаем доступные цены на все виды мебели, при этом не снижая качества наших изделий</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
+                        <div class="box_wrapper d-flex flex-column align-items-center">
+                            <div class="box_img d-flex flex-column align-items-center">
+                                <img src="media/why_us4.png" alt="">
+                            </div>
+                            <h3>Быстрый срок <br> изготовления</h3>
+                            <p>Мы работаем быстро и качественно, чтобы вы могли наслаждаться вашей новой мебелью в кратчайшие сроки</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="gallery">
             <div class="container-lg">
-
+                <h2 class="text-center">Примеры выполненных работ</h2>
+                <div class="gallery_slider_wrapper position-relative">
+                    <div class="gallery_slider">
+                        <div class="gallery_slide slick-current flex-column flex-lg-row d-flex align-items-center justify-content-between">
+                            <div class="gallery_slide_photo d-flex flex-column">
+                                <div class="gallery_slide_photo_top">
+                                    <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                </div>
+                                <div class="gallery_slide_photo_bottom d-flex align-items-center justify-content-between">
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                    </div>
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-2.jpeg" alt="" data-model="project1">
+                                    </div>
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-3.jpeg" alt="" data-model="project1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery_slide_info d-flex flex-column align-items-center justify-content-center">
+                                <h4 class="text-start">Описание проекта:</h4>
+                                <span class="description text-start">Материал корпуса ЛДСП</span>
+                                <span class="description text-start">Материал фасада МДФ</span>
+                                <span class="description text-start">Столещница огонь производство</span>
+                                <div class="price d-flex flex-column flex-sm-row align-items-end">
+                                    <p class="text-start">Срок изготовления <br> <span class="text-start">от 30 дней</span></p>
+                                    <p class="text-start">Стоимость <br> <span class="text-start">от 5 млн сум</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery_slide d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                            <div class="gallery_slide_photo d-flex flex-column">
+                                <div class="gallery_slide_photo_top">
+                                    <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                </div>
+                                <div class="gallery_slide_photo_bottom d-flex align-items-center justify-content-between">
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-1.jpeg" alt="" data-model="project2">
+                                    </div>
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-2.jpeg" alt="" data-model="project2">
+                                    </div>
+                                    <div class="img_wrapper">
+                                        <img src="media/projects/1-3.jpeg" alt="" data-model="project2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery_slide_info d-flex flex-column align-items-center justify-content-center">
+                                <h4 class="text-start">Описание проекта:</h4>
+                                <span class="description text-start">Материал корпуса ЛДСП</span>
+                                <span class="description text-start">Материал фасада МДФ</span>
+                                <span class="description text-start">Столещница огонь производство</span>
+                                <div class="price d-flex flex-column flex-sm-row align-items-end">
+                                    <p class="text-start">Срок изготовления <br> <span class="text-start">от 30 дней</span></p>
+                                    <p class="text-start">Стоимость <br> <span class="text-start">от 5 млн сум</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery_slider_arrows"></div>
+                    <div class="gallery_slider_dots"></div>
+                </div>
             </div>
         </section>
     </main>
-    <form id="regForm" action="">
+    <footer>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12 col-md-4 footer_info d-flex flex-column">
+                    <p>Мебель и дизайн "Bingomebel"</p>
+                    <p>2023</p>
+                </div>
+                <div class="col-12 col-md-4 policy d-flex flex-column">
+                    <p>Все права защищены</p>
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+                <div class="col-12 col-md-4 contacts d-flex align-items-center justify-content-around">
+                    <a href=""><img src="media/tg_logo.png" alt=""></a>
+                    <a href=""><img src="media/inst_logo.png" alt=""></a>
+                    <a href=""><img src="media/call_logo.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <form id="multiForm" action="">
 
         <h1>Register:</h1>
         
@@ -99,10 +219,18 @@
           <span class="step"></span>
           <span class="step"></span>
         </div>
-        
+        <div class="close-button">&times;</div>
     </form>
 
+    <div class="modal" id="project1-modal">
+        <img src="media/projects/1-1.jpeg" alt="">
+        <img src="media/projects/1-2.jpeg" alt="">
+        <img src="media/projects/1-3.jpeg" alt="">
+    </div>
+
+    <script src="jquery.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="slick.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
