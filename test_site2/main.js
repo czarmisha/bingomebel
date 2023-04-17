@@ -4,7 +4,7 @@ showTab(currentTab); // Display the current tab
 function showTab(n) {
     // This function will display the specified tab of the form ...
     var x = document.getElementsByClassName("tab");
-    x[n].style.display = "block";
+    x[n].style.display = "flex";
     // ... and fix the Previous/Next buttons:
     if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
@@ -12,9 +12,9 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("nextBtn").innerHTML = "Отправить";
     } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "Дальше";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
@@ -24,7 +24,14 @@ function nextPrev(n) {
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
-    if (n == 1 && !validateForm()) return false;
+    if (n==1 && !validateRadioInput()){
+      var options = x[currentTab].querySelectorAll('.quiz_photo_option');
+      options.forEach(function (val){
+        val.classList.remove('active');
+        val.classList.add('error');
+      });
+      return false; 
+    }
     // Hide the current tab:
     x[currentTab].style.display = "none";
     // Increase or decrease the current tab by 1:
@@ -32,33 +39,32 @@ function nextPrev(n) {
     // if you have reached the end of the form... :
     if (currentTab >= x.length) {
         //...the form gets submitted:
-        document.getElementById("regForm").submit();
+        document.getElementById("multiForm").submit();
         return false;
     }
     // Otherwise, display the correct tab:
     showTab(currentTab);
 }
 
-function validateForm() {
+function validateRadioInput() {
     // This function deals with validation of the form fields
-    var x, y, i, valid = true;
+    var x, y, i = true;
+    var checked = false;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-        if (y[i].value == "") {
-        // add an "invalid" class to the field:
-        y[i].className += " invalid";
-        // and set the current valid status to false:
-        valid = false;
+        if (y[i].checked) {
+          checked = true;
+          break;
         }
     }
     // If the valid status is true, mark the step as finished and valid:
-    if (valid) {
+    if (checked) {
         document.getElementsByClassName("step")[currentTab].className += " finish";
     }
-    return valid; // return the valid status
+    return checked; // return the valid status
 }
 
 function fixStepIndicator(n) {
@@ -173,3 +179,16 @@ $images.on('click', function() {
 });
 
 
+$('.quiz_photo_option').each(function () {
+  var option = $(this);
+  option.on("click", function(e) {
+      e.preventDefault();
+      var tab = option.closest('.tab')
+      $('.quiz_photo_option', tab).each(function (){
+        $(this).removeClass('error');
+        $(this).removeClass('checked');
+      });
+      $(option).addClass('checked');
+      $('input', option).prop('checked', true);
+  });
+});

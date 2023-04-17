@@ -179,10 +179,7 @@
             </div>
         </div>
     </footer>
-    <form id="multiForm" action="">
-
-        <h1>Register:</h1>
-        
+    <form id="multiForm" action="">        
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
             <div class="quiz_title">
@@ -190,36 +187,89 @@
                 <h3>Выберите планировку кухни</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q1" value="Прямая">
-                <input type="radio" name="q1" value="Угловая">
-                <input type="radio" name="q1" value="П-образная">
-                <input type="radio" name="q1" value="С островом">
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q1-1" name="q1" value="Прямая" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q1-1.jpeg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>Прямая</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q1-2" name="q1" value="Угловая" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q1-2.jpg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>Угловая</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q1-3" name="q1" value="П-образная" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q1-3.jpeg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>П-образная</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q1-4" name="q1" value="С островом" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q1-4.jpg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>С островом</span>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
         <div class="tab">
             <div class="quiz_title">
                 <span>Вопрос 2</span>
-                <h3>Укажите размер кухни/h3>
+                <h3>Укажите размер кухни</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q2" value="До 3 метров">
-                <input type="radio" name="q2" value="От 3 до 5 метров">
-                <input type="radio" name="q2" value="От 5 до 7 метров">
-                <input type="radio" name="q2" value="Больше 7 метров">
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q2-1" name="q2" value="До 3 метров" hidden>
+                    <div class="quiz_description">
+                        <span>До 3 метров</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q2-2" name="q2" value="От 3 до 5 метров" hidden>
+                    <div class="quiz_description">
+                        <span>От 3 до 5 метров</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q2-3" name="q2" value="От 5 до 7 метров" hidden>
+                    <div class="quiz_description">
+                        <span>От 5 до 7 метров</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q2-4" name="q2" value="Больше 7 метров" hidden>
+                    <div class="quiz_description">
+                        <span>Больше 7 метров</span>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="tab">
+        <!-- <div class="tab">
             <div class="quiz_title">
                 <span>Вопрос 3</span>
                 <h3>Выберите стиль кухни</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q3" value="Современный стиль">
-                <input type="radio" name="q3" value="Просто и со вкусом">
-                <input type="radio" name="q3" value="Классический стиль">
-                <input type="radio" name="q3" value="Свой вариант">
+                <input type="radio" id="q3-1" name="q3" value="Современный стиль" hidden>
+                <input type="radio" id="q3-2" name="q3" value="Просто и со вкусом" hidden>
+                <input type="radio" id="q3-3" name="q3" value="Классический стиль" hidden>
+                <input type="radio" id="q3-4" name="q3" value="Свой вариант" hidden>
             </div>
         </div>
 
@@ -229,11 +279,11 @@
                 <h3>Выберите материал фасада</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q4" value="Акрил">
-                <input type="radio" name="q4" value="ЛМДФ">
-                <input type="radio" name="q4" value="ЛДСП">
-                <input type="radio" name="q4" value="Крашенный МДФ">
-                <input type="radio" name="q4" value="Шпон">
+                <input type="radio" id="q4-1" name="q4" value="Акрил" hidden>
+                <input type="radio" id="q4-2" name="q4" value="ЛМДФ" hidden>
+                <input type="radio" id="q4-3" name="q4" value="ЛДСП" hidden>
+                <input type="radio" id="q4-4" name="q4" value="Крашенный МДФ" hidden>
+                <input type="radio" id="q4-5" name="q4" value="Шпон" hidden>
             </div>
         </div>
 
@@ -243,9 +293,9 @@
                 <h3>Выберите материал столешницы</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q5" value="ЛДСП">
-                <input type="radio" name="q5" value="Акрил">
-                <input type="radio" name="q5" value="Кварц">
+                <input type="radio" id="q5-1" name="q5" value="ЛДСП" hidden>
+                <input type="radio" id="q5-2" name="q5" value="Акрил" hidden>
+                <input type="radio" id="q5-3" name="q5" value="Кварц" hidden>
             </div>
         </div>
 
@@ -255,29 +305,27 @@
                 <h3>Укажите планируемый бюджет</h3>
             </div>
             <div class="quiz_body">
-                <input type="radio" name="q6" value="до 25 млн. сум">
-                <input type="radio" name="q6" value="до 35 млн. сум">
-                <input type="radio" name="q6" value="до 45 млн. сум">
-                <input type="radio" name="q6" value="выше 45 млн. сум">
+                <input type="radio" id="q6-1" name="q6" value="до 25 млн. сум" hidden>
+                <input type="radio" id="q6-2" name="q6" value="до 35 млн. сум" hidden>
+                <input type="radio" id="q6-3" name="q6" value="до 45 млн. сум" hidden>
+                <input type="radio" id="q6-4" name="q6" value="выше 45 млн. сум" hidden>
             </div>
-        </div>
+        </div> -->
         
         
-        <div style="overflow:auto;">
-          <div style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-          </div>
+        <div class="quiz_btns">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Дальше</button>
         </div>
         
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
           <span class="step"></span>
           <span class="step"></span>
+          <!-- <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
-          <span class="step"></span>
-          <span class="step"></span>
+          <span class="step"></span> -->
         </div>
         <div class="close-button">&times;</div>
     </form>
