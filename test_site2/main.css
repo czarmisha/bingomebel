@@ -803,10 +803,12 @@ input.invalid {
 
 .quiz_photo {
   border-radius: 6px;
+  height: 190px;
 }
 
 .quiz_photo img {
   width: 100%;
+  height: 100%;
   border-radius: 6px;
 }
 
