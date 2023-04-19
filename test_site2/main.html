@@ -230,6 +230,33 @@
         <div class="tab">
             <div class="quiz_title">
                 <span>Вопрос 2</span>
+                <h3>Укажите высоту кухни</h3>
+            </div>
+            <div class="quiz_body">
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q0-1" name="q0" value="До потолка" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q0-1.jpg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>До потолка</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option">
+                    <input type="radio" id="q0-2" name="q0" value="Стандартная" hidden>
+                    <div class="quiz_photo">
+                        <img src="media/q0-2.jpg" alt="">
+                    </div>
+                    <div class="quiz_description text-center">
+                        <span>Стандартная</span>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 3</span>
                 <h3>Укажите размер кухни</h3>
             </div>
             <div class="quiz_body">
@@ -262,7 +289,7 @@
         
         <div class="tab">
             <div class="quiz_title">
-                <span>Вопрос 3</span>
+                <span>Вопрос 4</span>
                 <h3>Выберите стиль кухни</h3>
             </div>
             <div class="quiz_body">
@@ -307,7 +334,7 @@
 
         <div class="tab">
             <div class="quiz_title">
-                <span>Вопрос 4</span>
+                <span>Вопрос 5</span>
                 <h3>Выберите материал фасада</h3>
             </div>
             <div class="quiz_body">
@@ -361,7 +388,7 @@
 
         <div class="tab">
             <div class="quiz_title">
-                <span>Вопрос 5</span>
+                <span>Вопрос 6</span>
                 <h3>Выберите материал столешницы</h3>
             </div>
             <div class="quiz_body">
@@ -397,33 +424,71 @@
 
         <div class="tab">
             <div class="quiz_title">
-                <span>Вопрос 6</span>
+                <span>Вопрос 7</span>
+                <h3>Выберите фурнитуру</h3>
+            </div>
+            <div class="quiz_body">
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q6-1" name="q6" value="Премиум (Blum)" hidden>
+                    <div class="quiz_description">
+                        <span>Премиум (Blum)</span>
+                    </div>
+                </div>
+                <div class="quiz_photo_option quiz_text_option">
+                    <input type="radio" id="q6-2" name="q6" value="Бюджетная (Польша)" hidden>
+                    <div class="quiz_description">
+                        <span>Бюджетная (Польша)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Вопрос 8</span>
                 <h3>Укажите планируемый бюджет</h3>
             </div>
             <div class="quiz_body">
                 <div class="quiz_photo_option quiz_text_option">
-                    <input type="radio" id="q6-1" name="q6" value="до 25 млн. сум" hidden>
+                    <input type="radio" id="q7-1" name="q7" value="до 25 млн. сум" hidden>
                     <div class="quiz_description">
                         <span>до 25 млн. сум</span>
                     </div>
                 </div>
                 <div class="quiz_photo_option quiz_text_option">
-                    <input type="radio" id="q6-2" name="q6" value="до 35 млн. сум" hidden>
+                    <input type="radio" id="q7-2" name="q7" value="до 35 млн. сум" hidden>
                     <div class="quiz_description">
                         <span>до 35 млн. сум</span>
                     </div>
                 </div>
                 <div class="quiz_photo_option quiz_text_option">
-                    <input type="radio" id="q6-3" name="q6" value="до 45 млн. сум" hidden>
+                    <input type="radio" id="q7-3" name="q7" value="до 45 млн. сум" hidden>
                     <div class="quiz_description">
                         <span>до 45 млн. сум</span>
                     </div>
                 </div>
                 <div class="quiz_photo_option quiz_text_option">
-                    <input type="radio" id="q6-4" name="q6" value="выше 45 млн. сум" hidden>
+                    <input type="radio" id="q7-4" name="q7" value="выше 45 млн. сум" hidden>
                     <div class="quiz_description">
                         <span>выше 45 млн. сум</span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="quiz_title">
+                <span>Готово</span>
+                <h3>Укажите свои контактные данные</h3>
+            </div>
+            <div class="quiz_body">
+                <div class="quiz_text_input">
+                    <input type="text" name="name" id="" placeholder="Имя*">
+                </div>
+                <div class="quiz_text_input">
+                    <input type="text" name="phone" id="" placeholder="Телефон*">
+                </div>
+                <div class="quiz_text_input">
+                    <textarea name="comment" id="" placeholder="Комментарий"></textarea>
                 </div>
             </div>
         </div>
@@ -436,6 +501,9 @@
         
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>

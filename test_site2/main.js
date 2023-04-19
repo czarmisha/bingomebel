@@ -24,7 +24,10 @@ function nextPrev(n) {
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
-    if (n==1 && !validateRadioInput()){
+    if (n==1 && currentTab == x.length - 1 && !validateTextInput()) {
+      return false; 
+    }
+    if (n==1 && currentTab < x.length - 1 && !validateRadioInput()){
       var options = x[currentTab].querySelectorAll('.quiz_photo_option');
       options.forEach(function (val){
         val.classList.remove('active');
@@ -32,6 +35,7 @@ function nextPrev(n) {
       });
       return false; 
     }
+    console.log('here');
     // Hide the current tab:
     x[currentTab].style.display = "none";
     // Increase or decrease the current tab by 1:
@@ -65,6 +69,30 @@ function validateRadioInput() {
         document.getElementsByClassName("step")[currentTab].className += " finish";
     }
     return checked; // return the valid status
+}
+
+function validateTextInput() {
+  // This function deals with validation of the form fields
+  var x, y, i = true;
+  var valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      if (y[i].value == '') {
+        valid = false;
+        y[i].classList.add('error');
+      }
+      else {
+        y[i].classList.remove('error');
+      }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+      document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
 }
 
 function fixStepIndicator(n) {

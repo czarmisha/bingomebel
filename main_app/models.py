@@ -9,8 +9,11 @@ class KitchenRequest(models.Model):
     fasad = models.CharField(max_length=50, verbose_name='Материал фасада')
     stoleshnica = models.CharField(max_length=50, verbose_name='Материал столешницы')
     budget = models.CharField(max_length=50, verbose_name='Бюджет')
+    furnitura = models.CharField(max_length=50, verbose_name='Фурнитура')
+    height = models.CharField(max_length=50, verbose_name='Высота')
     name = models.CharField(max_length=50, verbose_name='Имя')
-    phone = models.CharField(max_length=50, verbose_name='phone')
+    phone = models.CharField(max_length=50, verbose_name='Телефон')
+    comment = models.CharField(max_length=255, verbose_name='Комментарий', blank=True)
 
     def __str__(self) -> str:
-        return self.name + self.phone
+        return f'{self.name} {self.phone}'

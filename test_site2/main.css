@@ -744,7 +744,8 @@ input.invalid {
   align-items: center;
   width: 80%;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .quiz_title {
@@ -793,6 +794,7 @@ input.invalid {
 }
 
 .quiz_body {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -825,6 +827,29 @@ input.invalid {
   font-weight: 600;
   color: #2a2c2d;
   font-size: 16px;
+}
+
+.quiz_text_input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.quiz_text_input input[type="text"],
+.quiz_text_input textarea{
+  width: 350px;
+  border-radius: 6px;
+  border: 3px solid #2a2c2d;
+}
+
+.quiz_text_input textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.quiz_text_input input.error {
+  border: 3px solid rgb(187, 5, 5);
 }
 
 .quiz_btns{
