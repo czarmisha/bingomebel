@@ -2,7 +2,6 @@ from django.db import models
 
 
 class KitchenRequest(models.Model):
-    phone = models.CharField(max_length=20, verbose_name='Телефон')
     type = models.CharField(max_length=50, verbose_name='Планировка')
     size = models.CharField(max_length=50, verbose_name='Размер')
     style = models.CharField(max_length=50, verbose_name='Стиль')

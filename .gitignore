@@ -1,4 +1,5 @@
 venv/
+vevn/
 env/
 test_site/
 */__pycache__/

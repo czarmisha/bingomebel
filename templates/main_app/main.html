@@ -1,12 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="slick.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'slick.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -15,10 +17,10 @@
             <div class="container-lg d-flex justify-content-between align-items-center flex-column flex-sm-row">
                 <div class="logo d-flex align-items-center">
                     <a href="#" class="logo_link d-flex align-items-center">
-                        <img class="logo_img" src="media/logo.png" alt="Логотип">
+                        <img class="logo_img" src="{% static 'media/logo.png' %}" alt="Логотип">
                     </a>
                     <a link="#" class="write-us">
-                        <img src="media/tg_logo.png" alt="">
+                        <img src="{% static 'media/tg_logo.png' %}" alt="">
                         Написать в Telegram
                     </a>
                 </div>
@@ -45,7 +47,7 @@
             </div>
         </div>
         <div class="header_bg">
-            <img src="media/header_bg.jpeg" alt="">
+            <img src="{% static 'media/header_bg.jpeg' %}" alt="">
         </div>
     </header>
     <main>
@@ -56,7 +58,7 @@
                     <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
                         <div class="box_wrapper d-flex flex-column align-items-center">
                             <div class="box_img d-flex flex-column align-items-center">
-                                <img src="media/why_us1.png" alt="">
+                                <img src="{% static 'media/why_us1.png' %}" alt="">
                             </div>
                             <h3>Высокое <br> качество</h3>
                             <p>Мы используем только качественные материалы и оборудование высокого уровня, что гарантирует долговечность и функциональность мебели</p>
@@ -65,7 +67,7 @@
                     <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
                         <div class="box_wrapper d-flex flex-column align-items-center">
                             <div class="box_img d-flex flex-column align-items-center">
-                                <img src="media/why_us2.png" alt="">
+                                <img src="{% static 'media/why_us2.png' %}" alt="">
                             </div>
                             <h3>Индивидуальный <br> дизайн</h3>
                             <p>Мы разработаем уникальный дизайн мебели, учитывая все ваши пожелания и требования, исходя из которых создадим мебель, которая отлично впишется в ваш интерьер</p>
@@ -74,7 +76,7 @@
                     <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
                         <div class="box_wrapper d-flex flex-column align-items-center">
                             <div class="box_img d-flex flex-column align-items-center">
-                                <img src="media/why_us3.png" alt="">
+                                <img src="{% static 'media/why_us3.png' %}" alt="">
                             </div>
                             <h3>Доступные <br> цены</h3>
                             <p>Мы предлагаем доступные цены на все виды мебели, при этом не снижая качества наших изделий</p>
@@ -83,7 +85,7 @@
                     <div class="col-12 col-sm-6 col-md-3 mb-2 mb-md-0">
                         <div class="box_wrapper d-flex flex-column align-items-center">
                             <div class="box_img d-flex flex-column align-items-center">
-                                <img src="media/why_us4.png" alt="">
+                                <img src="{% static 'media/why_us4.png' %}" alt="">
                             </div>
                             <h3>Быстрый срок <br> изготовления</h3>
                             <p>Мы работаем быстро и качественно, чтобы вы могли наслаждаться вашей новой мебелью в кратчайшие сроки</p>
@@ -100,17 +102,17 @@
                         <div class="gallery_slide slick-current flex-column flex-lg-row d-flex align-items-center justify-content-between">
                             <div class="gallery_slide_photo d-flex flex-column">
                                 <div class="gallery_slide_photo_top">
-                                    <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                    <img src="{% static 'media/projects/1-1.jpeg' %}" alt="" data-model="project1">
                                 </div>
                                 <div class="gallery_slide_photo_bottom d-flex align-items-center justify-content-between">
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                        <img src="{% static 'media/projects/1-1.jpeg' %}" alt="" data-model="project1">
                                     </div>
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-2.jpeg" alt="" data-model="project1">
+                                        <img src="{% static 'media/projects/1-2.jpeg' %}" alt="" data-model="project1">
                                     </div>
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-3.jpeg" alt="" data-model="project1">
+                                        <img src="{% static 'media/projects/1-3.jpeg' %}" alt="" data-model="project1">
                                     </div>
                                 </div>
                             </div>
@@ -128,17 +130,17 @@
                         <div class="gallery_slide d-flex flex-column flex-lg-row align-items-center justify-content-between">
                             <div class="gallery_slide_photo d-flex flex-column">
                                 <div class="gallery_slide_photo_top">
-                                    <img src="media/projects/1-1.jpeg" alt="" data-model="project1">
+                                    <img src="{% static 'media/projects/1-1.jpeg' %}" alt="" data-model="project1">
                                 </div>
                                 <div class="gallery_slide_photo_bottom d-flex align-items-center justify-content-between">
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-1.jpeg" alt="" data-model="project2">
+                                        <img src="{% static 'media/projects/1-1.jpeg' %}" alt="" data-model="project2">
                                     </div>
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-2.jpeg" alt="" data-model="project2">
+                                        <img src="{% static 'media/projects/1-2.jpeg' %}" alt="" data-model="project2">
                                     </div>
                                     <div class="img_wrapper">
-                                        <img src="media/projects/1-3.jpeg" alt="" data-model="project2">
+                                        <img src="{% static 'media/projects/1-3.jpeg' %}" alt="" data-model="project2">
                                     </div>
                                 </div>
                             </div>
@@ -172,14 +174,15 @@
                     <a href="">Политика конфиденциальности</a>
                 </div>
                 <div class="col-12 col-md-4 contacts d-flex align-items-center justify-content-around">
-                    <a href=""><img src="media/tg_logo.png" alt=""></a>
-                    <a href="https://instagram.com/bingomebel_uz?igshid=YmMyMTA2M2Y="><img src="media/inst_logo.png" alt=""></a>
-                    <a href="tel:+998990044740"><img src="media/call_logo.png" alt=""></a>
+                    <a href=""><img src="{% static 'media/tg_logo.png' %}" alt=""></a>
+                    <a href="https://instagram.com/bingomebel_uz?igshid=YmMyMTA2M2Y="><img src="{% static 'media/inst_logo.png' %}" alt=""></a>
+                    <a href="tel:+998990044740"><img src="{% static 'media/call_logo.png' %}" alt=""></a>
                 </div>
             </div>
         </div>
     </footer>
-    <form id="multiForm" action="" method="POST">        
+    <form id="multiForm" action="{% url 'main_app:kitchen_form' %}" method="POST">  
+        {% csrf_token %}      
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
             <div class="quiz_title">
@@ -190,7 +193,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q1-1" name="q1" value="Прямая" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q1-1.jpeg" alt="">
+                        <img src="{% static 'media/q1-1.jpeg' %}"" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>Прямая</span>
@@ -199,7 +202,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q1-2" name="q1" value="Угловая" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q1-2.jpg" alt="">
+                        <img src="{% static 'media/q1-2.jpg' %}"" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>Угловая</span>
@@ -208,7 +211,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q1-3" name="q1" value="П-образная" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q1-3.jpeg" alt="">
+                        <img src="{% static 'media/q1-3.jpeg' %}"" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>П-образная</span>
@@ -217,7 +220,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q1-4" name="q1" value="С островом" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q1-4.jpg" alt="">
+                        <img src="{% static 'media/q1-4.jpg' %}"" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>С островом</span>
@@ -236,7 +239,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q0-1" name="q0" value="До потолка" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q0-1.jpg" alt="">
+                        <img src="{% static 'media/q0-1.jpg' %}" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>До потолка</span>
@@ -245,7 +248,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q0-2" name="q0" value="Стандартная" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q0-2.jpg" alt="">
+                        <img src="{% static 'media/q0-2.jpg' %}" alt="">
                     </div>
                     <div class="quiz_description text-center">
                         <span>Стандартная</span>
@@ -296,7 +299,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q3-1" name="q3" value="Современный стиль" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q3-1.jpeg" alt="">
+                        <img src="{% static 'media/q3-1.jpeg' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Современный стиль</span>
@@ -305,7 +308,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q3-2" name="q3" value="Просто и со вкусом" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q3-2.jpeg" alt="">
+                        <img src="{% static 'media/q3-2.jpeg' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Просто и со вкусом</span>
@@ -314,7 +317,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q3-3" name="q3" value="Классический стиль" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q3-3.jpeg" alt="">
+                        <img src="{% static 'media/q3-3.jpeg' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Классический стиль</span>
@@ -323,7 +326,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q3-4" name="q3" value="Свой вариант" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q3-4.png" alt="">
+                        <img src="{% static 'media/q3-4.png' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Свой вариант</span>
@@ -341,7 +344,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q4-1" name="q4" value="Акрил" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q4-1.JPG" alt="">
+                        <img src="{% static 'media/q4-1.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Акрил</span>
@@ -350,7 +353,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q4-2" name="q4" value="Эмаль" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q4-2.JPG" alt="">
+                        <img src="{% static 'media/q4-2.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Эмаль</span>
@@ -359,7 +362,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q4-3" name="q4" value="Массив" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q4-3.JPG" alt="">
+                        <img src="{% static 'media/q4-3.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Массив</span>
@@ -368,7 +371,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q4-5" name="q4" value="Шпон" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q4-4.jpg" alt="">
+                        <img src="{% static 'media/q4-4.jpg' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Шпон</span>
@@ -386,7 +389,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q5-1" name="q5" value="Ламинированный ЛДСП (Россия)" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q5-1.JPG" alt="">
+                        <img src="{% static 'media/q5-1.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Ламинированный ЛДСП (Россия)</span>
@@ -395,7 +398,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q5-2" name="q5" value="Кварцевый камень" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q5-2.JPG" alt="">
+                        <img src="{% static 'media/q5-2.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Кварцевый камень</span>
@@ -404,7 +407,7 @@
                 <div class="quiz_photo_option">
                     <input type="radio" id="q5-3" name="q5" value="Акриловый камень" hidden>
                     <div class="quiz_photo">
-                        <img src="media/q5-3.JPG" alt="">
+                        <img src="{% static 'media/q5-3.JPG' %}" alt="">
                     </div>
                     <div class="quiz_description">
                         <span>Акриловый камень</span>
@@ -510,9 +513,9 @@
         <div class="slider_arrows"></div>
       </div>
 
-    <script src="jquery.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="slick.js"></script>
-    <script src="main.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'slick.js' %}"></script>
+    <script src="{% static 'main.js' %}"></script>
 </body>
 </html>
