@@ -1,2 +1,82 @@
-done
-{{success}}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'slick.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Современные кухни и мебель на заказ | Bingomebel.uz</title>
+    <meta property="og:title" content="Современные кухни и мебель на заказ | Bingomebel.uz">
+    <meta name="description" content="Наша компания занимается изготовлением кухонь и мебели на заказ по индивидуальным проектам. Высокое качество материалов и исполнения. Звоните: +998 (ХХ) XXX-XXXX">
+    <meta property="og:description" content="Наша компания занимается изготовлением кухонь и мебели на заказ по индивидуальным проектам. Высокое качество материалов и исполнения. Звоните: +998 (ХХ) XXX-XXXX">
+    <meta name="keywords" content="кухни на заказ, мебель на заказ, производство мебели, изготовление кухонь, изготовление мебели, индивидуальные проекты, ташкент, кухни в ташкенте">
+    <html lang="ru">
+    <meta name="author" content="Bingomebel">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/png" href="{% static 'media/favicon.png' %}">
+    <!-- <meta property="og:image" content="http://example.com/image -->
+    <!-- <link rel="sitemap" type="application/xml" href="sitemap.xml"> -->
+
+</head>
+<body>
+    <header class="d-flex flex-column">
+        <div class="header_top">
+            <div class="container-lg d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                <div class="logo d-flex align-items-center">
+                    <a href="{% url 'main_app:home' %}" class="logo_link d-flex align-items-center">
+                        <img class="logo_img" src="{% static 'media/logo.png' %}" alt="Логотип">
+                    </a>
+                    <a link="#" class="write-us">
+                        <img src="{% static 'media/tg_logo.png' %}" alt="">
+                        Написать в Telegram
+                    </a>
+                </div>
+                <a class="phone" href="tel:+998990044740">
+                    Телефон: +998 99 004-47-40
+                </a>
+            </div>
+        </div>
+        <div class="header_content d-flex flex-grow-1">
+            <div class="container-lg d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                <div class="header_content done_form d-flex flex-column align-items-center justify-content-center">
+                    {% if success %}
+                    <h1 class="text-center mb-3">Спасибо за заявку, Ваш ответ записан.</h1>
+                    <p class="text-center">Наш менеджер скоро свяжется с Вами!</p>
+                    <img src="{% static 'media/done.png' %}" alt="">
+                    {% else %}
+                    <h1 class="text-center mb-3">Произошла ошибка.</h1>
+                    <p class="text-center">Попробуйте еще раз позже или позвоните/напишите нам!</p>
+                    <img src="{% static 'media/fail.png' %}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="header_bg">
+            <img src="{% static 'media/header_bg.webp' %}" alt="">
+        </div>
+    </header>
+    <footer>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12 col-md-4 footer_info d-flex flex-column">
+                    <p>Мебель и дизайн "Bingomebel"</p>
+                    <p>2023</p>
+                </div>
+                <div class="col-12 col-md-4 policy d-flex flex-column">
+                    <p>Все права защищены</p>
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+                <div class="col-12 col-md-4 contacts d-flex align-items-center justify-content-around">
+                    <a href=""><img src="{% static 'media/tg_logo.png' %}" alt=""></a>
+                    <a href="https://instagram.com/bingomebel_uz?igshid=YmMyMTA2M2Y="><img src="{% static 'media/inst_logo.png' %}" alt=""></a>
+                    <a href="tel:+998990044740"><img src="{% static 'media/call_logo.png' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

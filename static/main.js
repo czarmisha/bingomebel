@@ -43,6 +43,7 @@ function nextPrev(n) {
     // if you have reached the end of the form... :
     if (currentTab >= x.length) {
         //...the form gets submitted:
+        document.getElementById('multiForm').classList.remove('active');
         document.getElementById("multiForm").submit();
         return false;
     }
