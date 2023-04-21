@@ -11,7 +11,6 @@ def kitchen_form(request):
         style = request.POST.get("q3", "")
         fasad = request.POST.get("q4", "")
         stoleshnica = request.POST.get("q5", "")
-        budget = request.POST.get("q7", "")
         furnitura = request.POST.get("q6", "")
         height = request.POST.get("q0", "")
         name = request.POST.get("name", "")
@@ -25,7 +24,6 @@ def kitchen_form(request):
                 style = style,
                 fasad = fasad,
                 stoleshnica = stoleshnica,
-                budget = budget,
                 furnitura = furnitura,
                 height = height,
                 name = name,
@@ -49,7 +47,6 @@ def kitchen_form(request):
                 f'**Фасад**: {fasad}\n' \
                 f'**Столешница**: {stoleshnica}\n' \
                 f'**Фурнитура**: {furnitura}\n' \
-                f'**Бюджет**: {budget}\n\n' \
                 f'**Имя**: {name}\n' \
                 f'**Телефон**: {phone}\n' \
                 f'**Комментарий**: {comment}\n'

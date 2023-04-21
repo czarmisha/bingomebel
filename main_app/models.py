@@ -7,7 +7,7 @@ class KitchenRequest(models.Model):
     style = models.CharField(max_length=50, verbose_name='Стиль')
     fasad = models.CharField(max_length=50, verbose_name='Материал фасада')
     stoleshnica = models.CharField(max_length=50, verbose_name='Материал столешницы')
-    budget = models.CharField(max_length=50, verbose_name='Бюджет')
+    # budget = models.CharField(max_length=50, verbose_name='Бюджет')
     furnitura = models.CharField(max_length=50, verbose_name='Фурнитура')
     height = models.CharField(max_length=50, verbose_name='Высота')
     name = models.CharField(max_length=50, verbose_name='Имя')
