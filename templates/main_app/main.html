@@ -17,7 +17,7 @@
     <html lang="ru">
     <meta name="author" content="Bingomebel">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <link rel="icon" type="image/png" href="favicon.webp"> -->
+    <link rel="icon" type="image/png" href="{% static 'media/favicon.png' %}">
     <!-- <meta property="og:image" content="http://example.com/image -->
     <!-- <link rel="sitemap" type="application/xml" href="sitemap.xml"> -->
 
@@ -27,8 +27,8 @@
         <div class="header_top">
             <div class="container-lg d-flex justify-content-between align-items-center flex-column flex-sm-row">
                 <div class="logo d-flex align-items-center">
-                    <a href="#" class="logo_link d-flex align-items-center">
-                        <img class="logo_img" src="{% static 'media/logo.webp' %}" alt="Логотип">
+                    <a href="{% url 'main_app:home' %}" class="logo_link d-flex align-items-center">
+                        <img class="logo_img" src="{% static 'media/logo.png' %}" alt="Логотип">
                     </a>
                     <a link="#" class="write-us">
                         <img src="{% static 'media/tg_logo.webp' %}" alt="">
@@ -584,7 +584,7 @@
       </div>
 
     <script src="{% static 'jquery.js' %}"></script>
-    <script src="{% static 'bootstrap.min.js' %}"></script>
+    {% comment %} <script src="{% static 'bootstrap.min.js' %}"></script> {% endcomment %}
     <script src="{% static 'slick.js' %}"></script>
     <script src="{% static 'main.js' %}"></script>
 </body>

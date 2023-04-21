@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse
 from django.conf import settings
 from .models import KitchenRequest
 import requests
@@ -61,10 +62,11 @@ def kitchen_form(request):
             resp = requests.get(url, params=params)
         except Exception:
             print('error while sending message to telegram')
-
+        print(resp.status_code, resp.text)
         return render(request, 'main_app/done_kitchen.html', context={'success': True if resp.status_code == 200 else False})
 
 
 
 def home(request):
     return render(request, 'main_app/main.html')
+

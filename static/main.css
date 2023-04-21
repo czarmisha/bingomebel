@@ -917,6 +917,27 @@ input.invalid {
   padding: 6px 15px;
 }
 
+.done_form{
+  background: white;
+  border-radius: 6px;
+  padding: 25px;
+  min-height: 70vh;
+  min-width: 70vh;
+}
+
+.done_form h1{
+  color: #2a2c2d;
+}
+
+.done_form p{
+  color: #2a2c2d;
+}
+
+.done_form img{
+  width: 120px;
+  margin-top: 50px;
+}
+
 #prevBtn {
   border: 2px solid #2a2c2d;
   background-color: white;
@@ -975,6 +996,11 @@ input.invalid {
   }
   .quiz_photo {
     height: 105px;
+  }
+  .done_form{
+    min-height: 70vh;
+    min-width: 85%;
+    max-width: 90%;
   }
 }
 
