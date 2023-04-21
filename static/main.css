@@ -429,7 +429,7 @@ header {
 }
 
 .slider-prev {
-  background-image: url('media/arrow.png');
+  background-image: url('media/arrow.webp');
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -437,7 +437,7 @@ header {
 }
 
 .slider-next {
-  background-image: url('media/arrow.png');
+  background-image: url('media/arrow.webp');
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -500,7 +500,7 @@ header {
 }
 
 #modal .slider-prev {
-  background-image: url('media/arrow.png');
+  background-image: url('media/arrow.webp');
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -508,7 +508,7 @@ header {
 }
 
 #modal .slider-next {
-  background-image: url('media/arrow.png');
+  background-image: url('media/arrow.webp');
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center center;
