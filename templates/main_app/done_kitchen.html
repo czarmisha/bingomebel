@@ -17,7 +17,7 @@
     <html lang="ru">
     <meta name="author" content="Bingomebel">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" type="image/png" href="{% static 'media/favicon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'media/favicon.webp' %}">
     <!-- <meta property="og:image" content="http://example.com/image -->
     <!-- <link rel="sitemap" type="application/xml" href="sitemap.xml"> -->
 
@@ -28,10 +28,10 @@
             <div class="container-lg d-flex justify-content-between align-items-center flex-column flex-sm-row">
                 <div class="logo d-flex align-items-center">
                     <a href="{% url 'main_app:home' %}" class="logo_link d-flex align-items-center">
-                        <img class="logo_img" src="{% static 'media/logo.png' %}" alt="Логотип">
+                        <img class="logo_img" src="{% static 'media/logo.webp' %}" alt="Логотип">
                     </a>
                     <a link="#" class="write-us">
-                        <img src="{% static 'media/tg_logo.png' %}" alt="">
+                        <img src="{% static 'media/tg_logo.webp' %}" alt="">
                         Написать в Telegram
                     </a>
                 </div>
@@ -46,11 +46,11 @@
                     {% if success %}
                     <h1 class="text-center mb-3">Спасибо за заявку, Ваш ответ записан.</h1>
                     <p class="text-center">Наш менеджер скоро свяжется с Вами!</p>
-                    <img src="{% static 'media/done.png' %}" alt="">
+                    <img src="{% static 'media/done.webp' %}" alt="">
                     {% else %}
                     <h1 class="text-center mb-3">Произошла ошибка.</h1>
                     <p class="text-center">Попробуйте еще раз позже или позвоните/напишите нам!</p>
-                    <img src="{% static 'media/fail.png' %}" alt="">
+                    <img src="{% static 'media/fail.webp' %}" alt="">
                     {% endif %}
                 </div>
             </div>
@@ -71,9 +71,9 @@
                     <a href="">Политика конфиденциальности</a>
                 </div>
                 <div class="col-12 col-md-4 contacts d-flex align-items-center justify-content-around">
-                    <a href=""><img src="{% static 'media/tg_logo.png' %}" alt=""></a>
-                    <a href="https://instagram.com/bingomebel_uz?igshid=YmMyMTA2M2Y="><img src="{% static 'media/inst_logo.png' %}" alt=""></a>
-                    <a href="tel:+998990044740"><img src="{% static 'media/call_logo.png' %}" alt=""></a>
+                    <a href=""><img src="{% static 'media/tg_logo.webp' %}" alt=""></a>
+                    <a href="https://instagram.com/bingomebel_uz?igshid=YmMyMTA2M2Y="><img src="{% static 'media/inst_logo.webp' %}" alt=""></a>
+                    <a href="tel:+998990044740"><img src="{% static 'media/call_logo.webp' %}" alt=""></a>
                 </div>
             </div>
         </div>

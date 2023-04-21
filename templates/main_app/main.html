@@ -17,7 +17,7 @@
     <html lang="ru">
     <meta name="author" content="Bingomebel">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" type="image/png" href="{% static 'media/favicon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'media/favicon.webp' %}">
     <!-- <meta property="og:image" content="http://example.com/image -->
     <!-- <link rel="sitemap" type="application/xml" href="sitemap.xml"> -->
 
@@ -28,7 +28,7 @@
             <div class="container-lg d-flex justify-content-between align-items-center flex-column flex-sm-row">
                 <div class="logo d-flex align-items-center">
                     <a href="{% url 'main_app:home' %}" class="logo_link d-flex align-items-center">
-                        <img class="logo_img" src="{% static 'media/logo.png' %}" alt="Логотип">
+                        <img class="logo_img" src="{% static 'media/logo.webp' %}" alt="Логотип">
                     </a>
                     <a link="#" class="write-us">
                         <img src="{% static 'media/tg_logo.webp' %}" alt="">
@@ -559,8 +559,8 @@
         
         
         <div class="quiz_btns">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Дальше</button>
+            <button aria-label="Назад" type="button" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+            <button aria-label="Дальше" type="button" id="nextBtn" onclick="nextPrev(1)">Дальше</button>
         </div>
         
         <!-- Circles which indicates the steps of the form: -->
