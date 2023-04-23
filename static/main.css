@@ -1005,6 +1005,10 @@ input.invalid {
 }
 
 @media(max-width: 576px){
+  #multiForm {
+    width: 90%;
+  }
+  
   .quiz_photo_option{
     width: 70%;
   }
