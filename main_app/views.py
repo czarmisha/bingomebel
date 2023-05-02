@@ -17,19 +17,21 @@ def kitchen_form(request):
         name = request.POST.get("name", "")
         phone = request.POST.get("phone", "")
         comment = request.POST.get("comment", "")
-
+        contact = request.POST.get("contact", "")
+        print(contact)
         try:
             k_request = KitchenRequest(
-                type = type,
-                size = size,
-                style = style,
-                fasad = fasad,
-                stoleshnica = stoleshnica,
-                furnitura = furnitura,
-                height = height,
-                name = name,
-                phone = phone,
-                comment = comment
+                type=type,
+                size=size,
+                style=style,
+                fasad=fasad,
+                stoleshnica=stoleshnica,
+                furnitura=furnitura,
+                height=height,
+                name=name,
+                phone=phone,
+                comment=comment,
+                contact=contact
             )
         except Exception:
             print('error while creating KitchenRequest')
@@ -40,6 +42,7 @@ def kitchen_form(request):
         chat_id = settings.CHAT_ID
         base_url = 'https://api.telegram.org/bot'
         url = base_url + bot_token + '/sendMessage'
+        contact = "Позвонить" if contact == "call" else 'Написать'
         text = 'Новый запрос на подсчет стоимости\n\n' \
                 f'**Тип**: {type}\n' \
                 f'**Высота**: {height}\n' \
@@ -50,8 +53,9 @@ def kitchen_form(request):
                 f'**Фурнитура**: {furnitura}\n' \
                 f'**Имя**: {name}\n' \
                 f'**Телефон**: {phone}\n' \
-                f'**Комментарий**: {comment}\n'
-
+                f'**Комментарий**: {comment}\n' \
+                f'**Как связаться**: {contact}\n'
+        print(text)
         params = {
             'chat_id': chat_id,
             'text': text,

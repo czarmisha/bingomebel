@@ -13,6 +13,7 @@ class KitchenRequest(models.Model):
     name = models.CharField(max_length=50, verbose_name='Имя')
     phone = models.CharField(max_length=50, verbose_name='Телефон')
     comment = models.CharField(max_length=255, verbose_name='Комментарий', blank=True)
+    contact = models.CharField(max_length=255, verbose_name='Связь', blank=True, null=True)
 
     def __str__(self) -> str:
         return f'{self.name} {self.phone}'
