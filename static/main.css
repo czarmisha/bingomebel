@@ -901,6 +901,21 @@ input.invalid {
   border: 3px solid rgb(187, 5, 5);
 }
 
+.quiz_radio_input {
+ flex-direction: column;
+ align-items: center;
+ color: #2a2c2d;
+}
+
+.quiz_radio_input p {
+  color: #2a2c2d;
+}
+
+.quiz_radio_input label {
+  color: #2a2c2d;
+  margin: 0 10px;
+}
+
 .quiz_btns{
   display: flex;
   align-items: center;

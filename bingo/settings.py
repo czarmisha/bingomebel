@@ -132,4 +132,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 BOT_TOKEN = '5999752466:AAEwV3mB8mhyT18GnXf28aI8oqge9tzcSU4'
-CHAT_ID = -979472864
+CHAT_ID = -1001809551009
