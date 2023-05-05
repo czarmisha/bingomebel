@@ -554,7 +554,7 @@
                     <input type="text" name="name" id="" placeholder="Имя*">
                 </div>
                 <div class="quiz_text_input">
-                    <input type="text" name="phone" id="" placeholder="Телефон*">
+                    <input type="text" value="+998 (" placeholder="+998 (__) ___-__-__" minlength="19" maxlength="19" oninput="formatPhoneNumber(this)" name="phone" required>
                 </div>
                 <div class="quiz_text_input">
                     <textarea name="comment" id="" placeholder="Комментарий (не обязательно)"></textarea>
@@ -604,5 +604,28 @@
     {% comment %} <script src="{% static 'bootstrap.min.js' %}"></script> {% endcomment %}
     <script src="{% static 'slick.js' %}"></script>
     <script src="{% static 'main.js' %}"></script>
+    <script>
+        let pttern = ''
+        function formatPhoneNumber(input) {
+            var phoneNumber = String(input.value.replace(/\D/g,''));
+            console.log(phoneNumber, phoneNumber.length)
+            //if (phoneNumber.length == 0)pattern = ``;
+            if (phoneNumber.length == 3)pattern = `+998 (`;
+            if (phoneNumber.length == 4)pattern = `+998 (${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 5)pattern = `+998 (${phoneNumber[phoneNumber.length-2]}${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 6)pattern = `+998 (${phoneNumber[phoneNumber.length-3]}${phoneNumber[phoneNumber.length-2]}) ${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 7)pattern = `+998 (${phoneNumber[phoneNumber.length-4]}${phoneNumber[phoneNumber.length-3]}) ${phoneNumber[phoneNumber.length-2]}${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 8)pattern = `+998 (${phoneNumber[phoneNumber.length-5]}${phoneNumber[phoneNumber.length-4]}) ${phoneNumber[phoneNumber.length-3]}${phoneNumber[phoneNumber.length-2]}${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 9)pattern = `+998 (${phoneNumber[phoneNumber.length-6]}${phoneNumber[phoneNumber.length-5]}) ${phoneNumber[phoneNumber.length-4]}${phoneNumber[phoneNumber.length-3]}${phoneNumber[phoneNumber.length-2]}-${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 10)pattern = `+998 (${phoneNumber[phoneNumber.length-7]}${phoneNumber[phoneNumber.length-6]}) ${phoneNumber[phoneNumber.length-5]}${phoneNumber[phoneNumber.length-4]}${phoneNumber[phoneNumber.length-3]}-${phoneNumber[phoneNumber.length-2]}${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 11)pattern = `+998 (${phoneNumber[phoneNumber.length-8]}${phoneNumber[phoneNumber.length-7]}) ${phoneNumber[phoneNumber.length-6]}${phoneNumber[phoneNumber.length-5]}${phoneNumber[phoneNumber.length-4]}-${phoneNumber[phoneNumber.length-3]}${phoneNumber[phoneNumber.length-2]}-${phoneNumber[phoneNumber.length-1]}`;
+            if (phoneNumber.length == 12)pattern = `+998 (${phoneNumber[phoneNumber.length-9]}${phoneNumber[phoneNumber.length-8]}) ${phoneNumber[phoneNumber.length-7]}${phoneNumber[phoneNumber.length-6]}${phoneNumber[phoneNumber.length-5]}-${phoneNumber[phoneNumber.length-4]}${phoneNumber[phoneNumber.length-3]}-${phoneNumber[phoneNumber.length-2]}${phoneNumber[phoneNumber.length-1]}`;
+        
+            console.log(pattern)
+            // phoneNumber = phoneNumber.replace(/(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/, "+998 ($1$2) $3-$4-$5");
+            input.value = pattern;
+        }
+  
+    </script>
 </body>
 </html>

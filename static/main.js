@@ -35,7 +35,6 @@ function nextPrev(n) {
       });
       return false; 
     }
-    console.log('here');
     // Hide the current tab:
     x[currentTab].style.display = "none";
     // Increase or decrease the current tab by 1:
@@ -81,7 +80,9 @@ function validateTextInput() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
       // If a field is empty...
-      if (y[i].value == '') {
+      console.log('asdasda');
+      console.log(y[i].name);
+      if (y[i].value == '' || (y[i].name == 'phone' && y[i].value.length < 19 && !y[i].value == '')){
         valid = false;
         y[i].classList.add('error');
       }
